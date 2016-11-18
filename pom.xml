@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.guy</groupId>
+  <artifactId>Logger</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>Logger</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.4</version>
+        <configuration>
+          <doctitle>Logger Framework v${project.version}</doctitle>
+          <author>true</author>
+          <destDir>doc</destDir>
+          <nodeprecated>false</nodeprecated>
+          <nodeprecatedlist>false</nodeprecatedlist>
+          <noindex>false</noindex>
+          <nonavbar>false</nonavbar>
+          <notree>false</notree>
+          <source>1.5</source>
+          <sourcepath>src/main/java</sourcepath>
+          <excludePackageNames>com.guy.test</excludePackageNames>
+          <splitindex>true</splitindex>
+          <use>true</use>
+          <version>true</version>
+          <level>public</level>
+          <outputDirectory>doc</outputDirectory>
+          <javadocVersion>1.5</javadocVersion>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
